@@ -5,6 +5,9 @@
   "repository": "https://github.com/GuilhermeBn198/NLWHeatNode.git",
   "author": "Guilherme Bernardo <bguilherme51@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev" : "ts-node-dev src/app.ts"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
