@@ -26,11 +26,11 @@ app.use(router);
 
 
 
-app.get("/github", (request, response) => {
-	response.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`
+app.get("/github", (request, response) => { //authenticate with github api
+	response.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}` 
 	); 
 });
-app.get("/signin/callback", (request, response) => {
+app.get("/signin/callback", (request, response) => { //callback to get the code from github and validate user
 	const {code} = request.query;
 
 	return response.json(code);
